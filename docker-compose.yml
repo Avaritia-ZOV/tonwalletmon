@@ -1,0 +1,10 @@
+services:
+  tonmon:
+    image: ghcr.io/avaritia-zov/tonwalletmon:main
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - data:/data
+
+volumes:
+  data:
